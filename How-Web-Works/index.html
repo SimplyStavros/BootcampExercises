@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How the web works</title>
+</head>
+<body>
+    <h1>Parts 1-4</h1>
+        <h2>Part One: Solidify Terminology</h2>
+        <h3>What is HTTP?</h3>
+        <p>Http is the standard protocol used by servers and browsers to communicate with each other.</p>
+
+        <h3>What is a URL</h3>
+        <p>A URL is reference point to find content on the internet. It points to a particular location on the web</p>
+
+        <h3>What is DNS?</h3>
+        <p>DNS turns a URL into an IP address </p>
+
+        <h3>What is a query string?</h3>
+        <p>A query string provides extra information such as key words to search or page to navigate to.</p>
+
+        <h3>What are two HTTP verbs and how are they different</h3>
+        <p>Get and Post are two HTTP verbs. Get requests are used to retrieve information from a sight while POST is used to alter information on the site. Difference between looking at pictures on a site and posting your own picture onto the site.</p>
+
+        <h3>What is an HTTP request?</h3>
+        <p>HTTP request is when your browser points to a server and asks for some sort of information or action that is specified in the request.</p>
+
+        <h3>What is an HTTP response?</h3>
+        <p>This is the the reply the server sends to your browser. Usually the html. It will also send a status code (200, 404, etc.)</p>
+
+        <h3>What is an HTTP header? Give a couple examples of request and response headers you have seen.</h3>
+        <p>Part of a request or response that holds metadata and additional context. Preferred language is an example of this. Time that browser or server think it is is also one. This also can specify the preferred media formats.</p>
+
+        <h3>What are the processes that happen when you type "http://somesite.com/some/page.html" into a browser?</h3>
+        <p>
+            <ol>
+                <li>Browser makes a request at the somesite.com using http protocol</li>
+                <li>somesite.com is turned into IP address indicating server using DNS</li>
+                <li>The connection is made using default port (unless specified) which is 80</li>
+                <li>the request is made to retreive /some/page.html</li>
+                <li>The server responds with the either the page or with an error</li>
+                <li>The information is loaded in the browser for the user</li>
+            </ol>
+        </p>
+
+        <h2>Part Two: Practice Tools</h2>
+        //Using curl, make a GET request to the icanhazdadjoke.com API to find all jokes involving the word "pirate"
+        <p>curl -H "Accept: application/json" "https://icanhazdadjoke.com/search?term=pirate"</p>
+        //Use dig to find what the IP address is for icanhazdadjoke.com
+        <p>172.67.198.173</p>
+
+        <form action="/search" method="get">
+            Search for <input name="q">
+            <button type="submit">Search!</button>
+        </form>
+</body>
+</html>
